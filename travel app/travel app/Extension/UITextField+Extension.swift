@@ -25,6 +25,24 @@ extension UITextField {
         }
         rightViewMode = .always
     }
+    
+    func setLeftView(image: UIImage){
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 0, width: 20, height: 15))
+        
+         //leftView.frame = CGRect(x: 20, y: 0, width: 30, height: 20)
+                       //imageView.frame = CGRect(x: 13, y: 0, width: 15, height: 20)
+                      // TextField.leftViewMode = .always
+        
+        imageView.image = image
+        let location =  UIButton(frame: imageView.frame)
+        location.setImage(#imageLiteral(resourceName: "location"), for: .normal)
+        leftView = location
+        
+        leftView = imageView
+        leftViewMode = .always
+    }
+    
+    
     @objc func onClickEye(sender: UIButton){
         self.isSecureTextEntry = !self.isSecureTextEntry
         sender.isSelected = !sender.isSelected

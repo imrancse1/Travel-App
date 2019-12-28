@@ -30,3 +30,14 @@ class CustomView: UIView {
         
     }
 }
+
+extension UIView {
+    func designView(borderWidth: CGFloat = 1, borderColor: UIColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)){
+        layer.cornerRadius = frame.height / 2
+        clipsToBounds = true
+        layer.borderWidth = borderWidth
+        layer.borderColor = borderColor.cgColor
+    }
+    
+    
+}

@@ -21,7 +21,12 @@ class LoginViewController: UIViewController {
         
     }
     
+  
+    @IBAction func click(_ sender: Any) {
+        rootChange()
+        
+    }
+    
 
-   
-
+    
 }
